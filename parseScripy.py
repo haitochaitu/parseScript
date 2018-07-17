@@ -1,3 +1,4 @@
+import sys
 class Node:
     levelsList = []
     lineList = []
@@ -12,14 +13,14 @@ class Node:
     def __repr__(self):
         return "{}".format(self.value)
 
-    def readFile(self, inputFileName):
-        with open(inputFileName) as f:
-            lines = "".join(line for line in f if not line.isspace())
-            linelist = lines.split("\n")
-            for line in linelist:
-                self.setLevel(line)
-                self.lineList.append(line.replace(".", ""))
-
+    def readFile(self):
+        #for line in sys.stdin:
+        lines = "".join(line for line in sys.stdin if not line.isspace())
+        linelist = lines.split("\n")
+        for line in linelist:
+            self.setLevel(line)
+            self.lineList.append(line.replace(".", ""))
+        
     def setLevel(self, line):
         if line.count("*") > 0:
            self.levelsList.append(0)
@@ -90,10 +91,11 @@ class Node:
                 self.fileBuffer.append('  ' * depth + '-' + str(self.indexList[len(self.indexList) - 1]) + '%r' % child)
             self.processLines(child, depth + 1)
 
-root = Node()
-root.readFile('input.txt')
-root.traverseLevels()
-root.processLines(root)
-with open('output.txt', "w+") as f1:
-    for lines in root.fileBuffer:
-       f1.write(lines + "\n")
+if __name__ == '__main__':
+   root = Node()
+   root.readFile() 
+   root.traverseLevels()
+   root.processLines(root)
+   for lines in root.fileBuffer:
+       print(lines)
+  
