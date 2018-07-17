@@ -1,8 +1,8 @@
-# Program ParseScript" 
+# Program ParseScript
 
 1) How to execute the program:
 
-Run the command "cat input.txt | python parseScript.py > output.txt'
+   Run the command "cat input.txt | python parseScript.py > output.txt'
 
 2) Sample Input File Format:
  
