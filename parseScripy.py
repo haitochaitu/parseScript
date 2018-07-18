@@ -84,7 +84,7 @@ class Node:
                     index = str(self.indexList[len(self.indexList) - 1])
                     for i in range(len(index)):
                        indexFormatted = indexFormatted + index[i] +  "."
-                       self.fileBuffer.append('  ' * depth +  str(indexFormatted) + '%r' % child)
+                    self.fileBuffer.append('  ' * depth +  str(indexFormatted) + '%r' % child)
                 else:
                     self.fileBuffer.append('  ' * depth + '+' + str(self.indexList[len(self.indexList)-1]) + '%r' % child)
             else:

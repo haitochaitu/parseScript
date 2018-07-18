@@ -10,26 +10,17 @@
     - That is more sub text
 3. Numbers
   - Some text
-3. Lots
 3.1. Lots
   - Some more text
   - And some more
-3. And lots
-3.1. And lots
 3.1.1. And lots
   + One
     + Two
       - Three
-3. Of numbers
-3.1. Of numbers
-3.1.1. Of numbers
 3.1.1.1. Of numbers
   - Another line
-3. Less Numbers
 3.2. Less Numbers
   - Text
-3. More Numbers
-3.2. More Numbers
 3.2.1. More Numbers
   - Blah
 4. One number again
